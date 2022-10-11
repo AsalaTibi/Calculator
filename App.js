@@ -43,8 +43,14 @@ const App: () => Node = () => {
       <ScrollView>
         <View style={styles.intro}>
           <View style={styles.input}>
-            <TextInput placeholder={'Enter first Number'} />
-            <TextInput placeholder={'Enter second Number'} />
+            <TextInput
+              placeholder={'Enter first Number'}
+              onChangeText={firstNum => this.setState({firstNum})}
+            />
+            <TextInput
+              placeholder={'Enter second Number'}
+              onChangeText={secondNum => this.setState({secondNum})}
+            />
           </View>
           <View style={styles.buttonContainer}>
             <TouchableOpacity style={styles.btn_style}>
